@@ -4,20 +4,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
 import com.example.myloginapp.databinding.FragmentUserBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class UserFragment() : Fragment() {
 
 
     private var binding: FragmentUserBinding? = null
+    private val  vm:MainViewModel by viewModel()
 
-    var  vm = ViewModelProvider(this).get(MainViewModel::class.java)
 
 
     override fun onCreateView(

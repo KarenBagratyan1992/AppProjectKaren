@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.UserResultFragment">
+    tools:context="com.example.appprojectkaren.presentation.UserResultFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/my_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="my login is"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
-</FrameLayout>
+        />
+
+    <TextView
+        android:id="@+id/my_log_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="my login is"
+        android:textSize="24dp"
+        app:layout_constraintStart_toEndOf="@id/my_log"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/my_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="my pass is"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_log"
+
+        />
+
+    <TextView
+        android:id="@+id/my_pass_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="my pass is"
+        android:textSize="24dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@id/my_pass"
+        app:layout_constraintTop_toTopOf="@id/my_pass"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

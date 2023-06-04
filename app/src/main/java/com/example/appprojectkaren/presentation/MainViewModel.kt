@@ -16,6 +16,7 @@ class MainViewModel(
     private val _data: MutableLiveData<String> = MutableLiveData()
     var data: LiveData<String> = _data
 
+
     suspend fun saved(log: String, pass: String) {
         val text = LoginPasswordModel(login = log, password = pass)
 
